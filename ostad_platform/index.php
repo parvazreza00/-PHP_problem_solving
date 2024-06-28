@@ -5,3 +5,4 @@
  $h = false and true;
  echo $h;
 
+echo "hello world!"
