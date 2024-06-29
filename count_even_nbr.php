@@ -1,5 +1,5 @@
 <?php
-// a PHP program to count even number and their position from a given array;
+// write a PHP program to count even number and show their position by indexing with values from a given array;
 
 $arr = [3,9,6,1,4,8,11,18];
 $evens = 0;
