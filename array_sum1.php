@@ -8,10 +8,13 @@ $arr_sum = 0;
 //     $arr_sum += $arr[$i];
 // }
 
+//using array_sum() function
+$arr_sum = array_sum($arr);
+
 //using foreach loop
-foreach($arr as $n){
-    $arr_sum += $n;
-}
+// foreach($arr as $n){
+//     $arr_sum += $n;
+// }
 
 //using array_walk() function
 // array_walk($arr, function($value) use(&$sum){
