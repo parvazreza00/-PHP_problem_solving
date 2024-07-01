@@ -19,13 +19,20 @@ for ( $i = 1; $i <= $number; $i++ ) {
 
 
 for($i = 0; $i<=$number; $i++){
-    for($k = 5; $k>=$i; $k--){
+    for($k = 5; $k >= $i; $k--){
         echo " ";
     }
-
     for($j = 1; $j <= $i; $j++){
         echo "* ";
     }
-
-    echo "\n";  
+    echo "\n";
+}
+for($i=0;$i<=$number;$i++){
+    for($k=1;$k<=$i;$k++){
+        echo " ";
+    }
+    for($j=$number;$j>=$i; $j--){
+        echo "* ";
+    }
+    echo "\n";
 }
