@@ -1,4 +1,5 @@
 <?php
+//php program for remove duplicate element from an array
 
 $array = [1, 2, 2, 3, 4, 4, 5];
 
