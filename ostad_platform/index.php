@@ -1,8 +1,10 @@
 <?php
- $f = true || false;
- $e = false or true;
- $g = false && true;
- $h = false and true;
- echo $h;
 
-echo "hello world!"
+$veg = 'A, B, C, D, E';
+$veg_arr = explode(', ',$veg);
+print_r($veg_arr);
+
+echo "\n";
+
+$veg_str = join(', ', $veg_arr);
+echo $veg_str;
