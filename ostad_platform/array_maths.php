@@ -1,0 +1,25 @@
+<?php
+$array1 = ["a","b","c","d"];
+$array2 = ["b","c"];
+$arr_diff = array_intersect($array1, $array2);
+print_r($arr_diff);
+echo "\n";
+$array3 = ["a"=>"green", "b"=>"blue", "c"=> "yellow"];
+$array4 = ["a"=>"green"];
+$assoc = array_intersect_key($array3, $array4);
+print_r($assoc);
+echo "\n";
+$input = ["a","b","c","c","d","e"];
+$result = array_unique($input);
+print_r($result);
+echo "\n";
+$input2 = ["apple","banana","cherry","date"];
+$random = array_rand($input2);
+print_r($random);
+echo "\n";
+$numbers = [1, 2, 3, 4, 5];
+shuffle($numbers);
+print_r($numbers);
+echo "\n";
+$evenNumbers = range(0, 2);
+print_r($evenNumbers);
