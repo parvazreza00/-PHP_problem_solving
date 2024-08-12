@@ -1,17 +1,19 @@
 <?php
-$input = trim(fgets(STDIN));
-list($num1, $num2) = explode(' ', $input); 
+$input1 = trim(fgets(STDIN));
+$input2 = trim(fgets(STDIN));
 
-function sum($num1, $num2){
-    if($num1+$num2 == 10){
+// list($num1, $num2) = explode(' ', $input); 
+
+function sum($input1, $input2){
+    if($input1+$input2 == 10){
         echo "True";
-    }elseif($num1 == 10){
+    }elseif($input1 == 10){
         echo "True";
-    }elseif($num2 == 10){
+    }elseif($input2 == 10){
         echo "True";
     }else{
         echo "False";
     }
 }
 
-sum($num1, $num2);
+sum($input1, $input2);
