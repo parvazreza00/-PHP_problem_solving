@@ -1,35 +1,28 @@
 <?php
 
-// function countSubStr($string, $subStr){
-//     $count = 0;
-//     $pos = 0;
-//     while(($pos = strpos($string, $subStr, $pos)) !==false){
-//         $count++;
-//         $pos++;
-//     }
-//     return $count;
-// }
+// Command line input for two strings
+$input = trim(fgets(STDIN));
+list($mainString, $subString) = explode(' ', $input);
 
-// $largeStr = "abababab ab";
-// $subStr = "ab";
+// Function to count occurrences
+function countOccurrences($mainString, $subString) {
+    $count = 0;
+    $subStringLength = strlen($subString);
+    $mainStringLength = strlen($mainString);
 
-// echo  countSubStr($largeStr, $subStr);
-
-// $string="abababab ab";
-// $substr = "ab";
-// $count = substr_count($string, $substr);
-// echo $count;
-
-function count_substring($s, $t){
-    if(empty($s) || empty($t)){
-        return 0;
+    for ($i = 0; $i <= $mainStringLength - $subStringLength; $i++) {
+        $currentSubstring = substr($mainString, $i, $subStringLength);
+        if ($currentSubstring === $subString) {
+            $count++;
+        }
     }
-    $count = substr_count($s, $t);
+
     return $count;
 }
-$s = trim(fgets(STDIN));
-$t = trim(fgets(STDIN));
-echo count_substring($s,$t);
+
+$result = countOccurrences($mainString, $subString);
+echo $result;
+
 
 
 
