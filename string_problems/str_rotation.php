@@ -1,24 +1,24 @@
 <?php
-function isRotation($str1, $str2) {
-    // Check if the lengths of the strings are the same and not empty
-    if (strlen($str1) === strlen($str2) && strlen($str1) > 0) {
-        // Concatenate str1 with itself
-        $concatenatedStr = $str1 . $str1;
-
-        // Check if str2 is a substring of the concatenated string
-        return strpos($concatenatedStr, $str2) !== false;
+function string_rotation($str1, $str2){
+    if(strlen($str1) !== strlen($str2)){
+        echo "NO\n";
     }
 
-    return false;
-}
+    if(strlen($str1) == strlen($str2)){
+        $str1 = $str1.$str1;
+    }
 
-// Example usage with command line input
-echo "Enter two strings separated by a space: ";
-$input = trim(fgets(STDIN));
-list($str1, $str2) = explode(' ', $input);
+    if(strpos($str1, $str2) > 0){
+        echo "yes\n";
+    }else{
+        echo "No\n";
+    }
 
-if (isRotation($str1, $str2)) {
-    echo "True\n";
-} else {
-    echo "False\n";
 }
+echo "Enter first String : ";
+$str1 = trim(fgets(STDIN));
+echo "Enter second String : ";
+$str2 = trim(fgets(STDIN));
+echo $str1.$str2."\n";
+
+string_rotation($str1, $str2);
