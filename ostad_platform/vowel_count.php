@@ -14,7 +14,6 @@ function countVowels($string){
 }
 $input = trim(fgets(STDIN));
 $array = array_map('trim', explode(',', $input));
-// print_r($array);
 
 foreach($array as $string){
     $vowelCount = countVowels($string);

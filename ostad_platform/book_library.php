@@ -53,12 +53,12 @@ class Member {
 
     // Method for the member to borrow a book
     public function borrowBook($book) {
-        $book->borrowBook();
-        // if ($book->borrowBook()) {
-        //     echo $this->name . " borrowed \"" . $book->getTitle() . "\".\n";
-        // } else {
-        //     echo "Sorry, \"" . $book->getTitle() . "\" is not available.\n";
-        // }
+        // $book->borrowBook();
+        if ($book->borrowBook()) {
+            echo $this->name . " borrowed \"" . $book->getTitle() . "\".\n";
+        } else {
+            echo "Sorry, \"" . $book->getTitle() . "\" is not available.\n";
+        }
     }
 
     // Method for the member to return a book
