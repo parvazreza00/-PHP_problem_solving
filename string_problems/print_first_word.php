@@ -1,4 +1,5 @@
 <?php
+//get the first word of a sentence in PHP
 echo "Enter a string: ";
 $str = trim(fgets(STDIN));
 
