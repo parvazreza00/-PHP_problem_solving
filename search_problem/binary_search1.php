@@ -25,13 +25,21 @@ function binarySearch($arr, $k){
 }
 
 
-$arr= [1, 3, 5, 7, 17, 11, 13, 19, 9, 15]; 
+// $arr= [1, 3, 5, 7, 17, 11, 13, 19, 9, 15]; 
+echo "Enter the size of the array (N): ";
+$size = intval(fgets(STDIN));
+echo "Enter the elements of the array separated by spaces: ";
+$input = trim(fgets(STDIN));
+$arr = array_map('intval', explode(' ',$input));
+
 sort($arr);
-$k = 9;
+
+echo "Enter the targeted value: ";
+$k = intval(fgets(STDIN));
 
 $position = binarySearch($arr, $k);
 if($position != -1){
-    echo "Element $k found at position : $position";
+    echo  $position;
 }else{
-    echo "Element $k do not found";
+    echo "Element not found";
 }
