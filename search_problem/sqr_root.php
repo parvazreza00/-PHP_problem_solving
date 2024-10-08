@@ -31,3 +31,5 @@ function apprSqrt($n) {
 
 $n = intval(fgets(STDIN));
 echo apprSqrt($n);
+
+// hello
