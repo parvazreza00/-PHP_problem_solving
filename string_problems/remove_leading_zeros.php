@@ -14,4 +14,4 @@ function removeLeadingZeros($input){
     return preg_replace('/^0+/', '', $input);
 }
 
-echo removeLeadingZeros($input);
+echo removeLeadingZeros($input);    
